@@ -9,12 +9,15 @@ import android.database.sqlite.SQLiteOpenHelper
  */
 
 // classe com o construtor inicializado
-class BdHelper(context:Context) :SQLiteOpenHelper(context,BdHelper.NOME_BD,null,BdHelper.VERSAO_DB) {
+class BdHelper :SQLiteOpenHelper {
 
     // inicializando os components do objetos
     companion object {
-        val NOME_BD = "Postagens.db"
+        val NOME_BD = "user.db"
         val VERSAO_DB=1;
+    }
+    constructor(context: Context):super(context,NOME_BD,null,VERSAO_DB){
+
     }
 
     //Função Upgrade da versao do Database
@@ -24,11 +27,11 @@ class BdHelper(context:Context) :SQLiteOpenHelper(context,BdHelper.NOME_BD,null,
     }
 // Funcao OnCreate DataBase
     override fun onCreate(db: SQLiteDatabase?) {
-        db?.execSQL("CREATE TABLE if not exists" +
+        db?.execSQL("create table " +
                 "usuario(" +
                 "_token integer primary key autoincrement," +
                 "nome text," +
                 "email text," +
-                "senha text")
+                "senha text);")
     }
 }

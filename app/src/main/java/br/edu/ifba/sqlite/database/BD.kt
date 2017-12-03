@@ -22,6 +22,7 @@ class BD {
         valores.put("nome",user.nome)
         valores.put("email",user.email)
         valores.put("senha",user.senha)
+        db?.insert("usuario",null,valores)
 
     }
 
