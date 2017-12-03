@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Cadastro", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
 
-
+            openCadastro()
         }
     }
 
@@ -42,8 +42,12 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+ // abre a activity de Cadastro
     fun openCadastro(){
-
+        val intent = Intent(this,CadastroActivity::class.java)
+        startActivity(intent)
 
     }
 }
+
+

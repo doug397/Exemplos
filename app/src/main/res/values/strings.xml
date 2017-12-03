@@ -2,4 +2,9 @@
     <string name="app_name">SqLite</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_cadastro">CadastroActivity</string>
+
+    <string name="txt_nome">Nome</string>
+    <string name="txt_email">Email</string>
+    <string name="txt_senha">Senha</string>
+    <string name="btn_cadastrar">Cadastrar</string>
 </resources>
